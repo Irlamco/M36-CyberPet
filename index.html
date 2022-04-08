@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Pet</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.min.js"></script>
+
+</head>
+<body>
+    <section id="one">
+        <button id="start">Click here to begin!</button>
+        <p id="greeting"></p>
+    </section>
+    <section id="two">
+        <div id="petContainer">
+            <h1 id="status">..</h1>
+            <div id="stats">
+                <div>
+                    <h2>Sleepy</h2>
+                    <h1 id="sleep">..</h1>
+                </div>
+                <div>
+                    <h2>Happy</h2>
+                    <h1 id="happy">..</h1>
+                </div>
+                <div>
+                    <h2>Hungry</h2>
+                    <h1 id="hungry">..</h1>
+                </div>
+            </div>
+            
+            <model-viewer id="pet" disable-zoom src="Model/Animations/Pet_Idle.gltf" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" autoplay min-camera-orbit="auto 71deg auto" max-camera-orbit="auto 107deg auto" camera-orbit="2.601deg 91.06deg auto" auto-rotate>
+
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+        </div>
+        <section id="buttons">
+            <button id="restButton">Rest</button>
+            <button id="eatButton">Eat</button>
+            <button id="playButton">Play</button>
+            <button id="stop">Stop</button>
+        </section>
+        <section id="">
+            <div id="health"></div>
+            <div id="hunger"></div>
+        </section>
+    </section>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
